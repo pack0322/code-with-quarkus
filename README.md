@@ -23,3 +23,6 @@ You can run your application in dev mode that enables live coding using:
     <img src="screenshots/파일명.png" width="45%" alt="실습 2 화면">
 </div>
 <br>
+
+## 3주차 수업 내용
+실습 1 :  HTML/CSS 기본, 심화 개발 완료!
