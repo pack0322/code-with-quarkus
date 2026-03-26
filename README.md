@@ -21,13 +21,13 @@ You can run your application in dev mode that enables live coding using:
 
 ## 3,4주차 수업 및 과제
 실습 1 :  HTML/CSS 기본, 심화 개발 완료!
-과제 :
-1. 네이바 앞에 로고 삽입
-2. 네비바 가운데 정렬 
-- UL 목록 속성 수정 : me-auto 이부분을 mx-auto 로 변경 하여 네비바 가운데 정렬
-3. 챔피온 카드
-- 기존 챔피언  div 에서 안에 글자만 바꾸기
-- 모달 폴더 안에 각 챔피온.html 만들어서 상세 정보 추가 구현
+<span style="position: relative; top: 8px;">과제 :</span> 
+    1. 네이바 앞에 로고 삽입
+    2. 네비바 가운데 정렬 
+    - UL 목록 속성 수정 : me-auto 이부분을 mx-auto 로 변경 하여 네비바 가운데 정렬
+    3. 챔피온 카드
+    - 기존 챔피언  div 에서 안에 글자만 바꾸기
+    - 모달 폴더 안에 각 챔피온.html 만들어서 상세 정보 추가 구현
 
 <div align="center">
     <img src="screenshots/4_1.png" width="45%" alt="4주차 과제완료 화면">
