@@ -21,7 +21,7 @@ You can run your application in dev mode that enables live coding using:
 
 ## 3,4주차 수업 및 과제
 실습 1 :  HTML/CSS 기본, 심화 개발 완료!
-<span style="position: relative; top: 8px;">과제 :</span> 
+과제 : 
     1. 네이바 앞에 로고 삽입
     2. 네비바 가운데 정렬 
     - UL 목록 속성 수정 : me-auto 이부분을 mx-auto 로 변경 하여 네비바 가운데 정렬
