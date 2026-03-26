@@ -30,7 +30,7 @@ You can run your application in dev mode that enables live coding using:
 - 모달 폴더 안에 각 챔피온.html 만들어서 상세 정보 추가 구현
 
 <div align="center">
-    <img src="screenshots/4_1png" width="45%" alt="4주차 과제완료 화면">
+    <img src="screenshots/4_1.png" width="45%" alt="4주차 과제완료 화면">
     <img src="screenshots/4_2.png" width="45%" alt="4주차 과제완료 화면">
     <img src="screenshots/4_3.png" width="45%" alt="4주차 과제완료 화면">
 </div>
