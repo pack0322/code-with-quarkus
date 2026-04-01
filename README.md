@@ -15,15 +15,15 @@ You can run your application in dev mode that enables live coding using:
 매 주 수업 내용을 정리하자.
 
 ## 2주차 수업 내용
-실습 1 : 쿼크스 환경 구축 및 준비 완료!
+실습 1 : 쿼크스 환경 구축 및 준비 완료!<br>
 실습 2 : HTML 기본 및 LOL 메인 화면 개발 완료!
 
 
 ## 3,4주차 수업 및 과제
-실습 1 :  HTML/CSS 기본, 심화 개발 완료!
+실습 1 :  HTML/CSS 기본, 심화 개발 완료!<br>
 과제 : 
     1. 네비바 앞에 로고 삽입
-    2. 네비바 가운데 정렬 
+    2. 네비바 가운데 정렬
     - UL 목록 속성 수정 : me-auto 이부분을 mx-auto 로 변경 하여 네비바 가운데 정렬
     3. 챔피온 카드
     - 기존 챔피언  div 에서 안에 내부글자 변경
