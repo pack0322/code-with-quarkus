@@ -40,3 +40,9 @@ You can run your application in dev mode that enables live coding using:
 <div align="center">
     <img src="screenshots/5_1.png" width="45%" alt="5주차 수업완료 화면">
 </div>
+
+## 6주차 수업
+실습 : ppt_6주차 : 실시간 챔피언 검색하기 - 1 완료!
+<div align="center">
+    <img src="screenshots/6_1.png" width="45%" alt="6주차 수업완료 화면">
+</div>
