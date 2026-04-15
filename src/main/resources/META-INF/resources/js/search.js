@@ -15,6 +15,9 @@ const CHAMPIONS = [
     { name: '브라이어', engName: 'Briar', role: '전사', lane: '정글', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Briar.png', difficulty: '중' },
     { name: '잭스', engName: 'Jax', role: '전사', lane: '탑', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Jax.png', difficulty: '하' },
     { name: '징크스', engName: 'Jinx', role: '원거리딜러', lane: '원딜', img: 'https://ddragon.leagueoflegends.com/cdn/15.24.1/img/champion/Jinx.png', difficulty: '중' },
+    { name: '멜', engName: 'Mel', role: '메이지', lane: '미드', img: '../images/Mel.jpg', difficulty: '중' },
+    { name: '유나라', engName: 'Yunara', role: '암살자', lane: '탑', img: '../images/Yunara.jpg', difficulty: '중상' },
+    { name: '자헨', engName: 'Jahin', role: '전사', lane: '탑', img: '../images/Jahin.png', difficulty: '중' }
 ];
 
 // ── 뉴스 데이터──────────────────────────────────────────────
@@ -24,9 +27,34 @@ const NEWS = [
 ];
 
 // ── 검색 실행 ────────────────────────────────────────────────
+function showMainScreen() {
+    // 검색 결과 숨기기
+    const searchResults = document.getElementById('searchResults');
+    if (searchResults) {
+        searchResults.style.display = 'none';
+        searchResults.classList.add('d-none');
+    }
+
+    // 히어로 다시 보이기
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        hero.classList.remove('d-none');
+    }
+
+    // 기존 섹션 다시 보이기
+    document.querySelectorAll('section:not(#searchResults)').forEach(s => {
+        s.classList.remove('d-none');
+    });
+}
+
+
 function performSearch(query) {
     const q = query.trim().toLowerCase(); // 앞 뒤 공백제거, 소문자 변환
-    if (!q) return;
+    if (!q) {
+        showMainScreen();  // ← 추가
+        return;
+    } 
+    
 
     document.getElementById('searchKeywordDisplay').textContent = `"${query}"`; // 검색어 인식
 
@@ -94,5 +122,4 @@ document.getElementById('searchForm').addEventListener('submit', function(e) {
     const query = document.getElementById('searchInput').value;
     performSearch(query);
 });
-
 
