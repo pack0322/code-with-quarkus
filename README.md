@@ -77,3 +77,11 @@ You can run your application in dev mode that enables live coding using:
     <img src="screenshots/7_1.png" width="45%" alt="7주차 수업완료 화면">
     <img src="screenshots/7_2.png" width="45%" alt="7주차 과제완료 화면">
 </div>
+
+## 9주차 수업
+실습 : ppt_9주차 : JS 기능 추가 및 MYSQL
+<div align="center">
+    <img src="screenshots/9_1.png" width="45%" alt="9주차 수업완료 화면">
+    <img src="screenshots/9_2.png" width="45%" alt="9주차 수업완료 화면">
+    <img src="screenshots/9_3.png" width="45%" alt="9주차 수업완료 화면">
+</div>
