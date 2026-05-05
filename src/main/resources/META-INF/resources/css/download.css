@@ -63,3 +63,17 @@ body {
 .accent-purple { 
     color: #a020f0; 
 }
+
+body.light-mode {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+  
+  body.light-mode .navbar {
+    background-color: #e9ecef !important;
+}
+  
+  body.light-mode .navbar .navbar-brand,
+  body.light-mode .navbar .nav-link {
+    color: #212529 !important;
+}

@@ -17,3 +17,11 @@ function toggleTheme() {
         navbar.classList.add('navbar-dark', 'bg-dark');
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('themeToggleBtn');
+  
+    if (btn) {
+      btn.addEventListener('click', toggleTheme);
+    }
+});

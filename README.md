@@ -78,10 +78,36 @@ You can run your application in dev mode that enables live coding using:
     <img src="screenshots/7_2.png" width="45%" alt="7주차 과제완료 화면">
 </div>
 
-## 9주차 수업
-실습 : ppt_9주차 : JS 기능 추가 및 MYSQL
+## 9주차 수업 및 과제
+실습 : ppt_9주차 : JS 기능 추가 및 MYSQL<br>
+
+과제 :
+
+1. 챔피언 검색 결과 모달창 띄우기
+
+   - search.js 챔피언 데이터에 modalId 속성 추가
+   - 검색 결과 카드에 data-bs-toggle, data-bs-target 적용
+   - 클릭 시 기존 상세보기와 동일한 Bootstrap 모달 출력
+   - 모달을 section 외부로 이동하여 정상 동작하도록 수정
+
+2. JavaScript 호출 방식 개선
+
+   - onclick 인라인 방식 제거
+   - addEventListener 기반 이벤트 리스너 방식으로 변경
+   - DOMContentLoaded 이후 버튼 이벤트 등록
+
+3. 동일 기능 적용
+
+   - 다크/라이트 모드 기능 구현 (toggleTheme)
+   - 메인 페이지 및 다운로드 페이지에 동일하게 적용
+   - DOMContentLoaded 이후 버튼 이벤트 등록
+
+
 <div align="center">
     <img src="screenshots/9_1.png" width="45%" alt="9주차 수업완료 화면">
     <img src="screenshots/9_2.png" width="45%" alt="9주차 수업완료 화면">
     <img src="screenshots/9_3.png" width="45%" alt="9주차 수업완료 화면">
+    <img src="screenshots/9_4.1.png" width="45%" alt="9주차 과제완료 화면">
+    <img src="screenshots/9_4.2.png" width="45%" alt="9주차 과제완료 화면">
+    <img src="screenshots/9_4.3.png" width="45%" alt="9주차 과제완료 화면">
 </div>
