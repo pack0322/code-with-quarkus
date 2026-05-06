@@ -1,4 +1,7 @@
-package org.acme;
+package org.acme.common;
+
+import org.acme.Champion.Champion;
+import org.acme.login.User;
 
 import io.quarkus.runtime.StartupEvent;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -10,6 +13,18 @@ public class DataSeeder {
 
     @Transactional
     void onStart(@Observes StartupEvent ev) { // CDI 표준, 이벤트
+
+        // DataSeeder.java onStart() 메서드에 추가
+
+        // User 초기 데이터 (챔피온 데이터와 별도 블록)
+        if (User.count() == 0) {
+            User guest = new User();
+            guest.username = "guest";
+            guest.password = "123123";
+            guest.persist();
+        }
+
+
         if(Champion.count() > 0) return; // 이미 데이터 있으면 중단
 
         persist("아트록스", "전사", "탑");

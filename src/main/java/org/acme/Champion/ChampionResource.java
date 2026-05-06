@@ -1,4 +1,4 @@
-package org.acme;
+package org.acme.Champion;
 
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
