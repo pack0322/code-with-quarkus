@@ -10,6 +10,15 @@ import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import io.vertx.ext.web.RoutingContext;
 
+import java.util.Map;
+import java.util.UUID;
+import java.nio.file.Paths;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+
+import org.jboss.resteasy.reactive.RestForm;
+import org.jboss.resteasy.reactive.multipart.FileUpload;
+
 @Path("/") // 기본 경로가 최상위 /
 public class AuthResource {
 
@@ -161,4 +170,155 @@ public class AuthResource {
         return Response.ok(html).build();
     }
 
+    // GET / → 세션 유무에 따라 메인 페이지 분기
+    @GET
+    @Produces(MediaType.TEXT_HTML)
+    public Response mainPage() {
+        String loginUser = context.session().get("loginUser");
+    
+        System.out.println("=== [GET /] 세션 ID : " +
+    context.session().id());
+        System.out.println("=== [GET /] loginUser : " + loginUser);
+    
+        String htmlPath = (loginUser != null)
+            ? "META-INF/resources/login/main_after_login.html"
+            : "META-INF/resources/main_index.html";
+    
+            InputStream html =
+        getClass().getClassLoader().getResourceAsStream(htmlPath);
+            return Response.ok(html).build();
+    }
+
+    @GET
+    @Path("/profile")
+    @Produces(MediaType.TEXT_HTML)
+    public Response profilePage() {
+        
+        // ①세션체크(로그인안한사용자차단)
+        String loginUser = context.session().get("loginUser");
+        if (loginUser == null) {
+            return Response
+                .seeOther(URI.create("/login"))
+                .build();
+        }
+
+    // ②DB에서사용자정보조회
+    User user = User.findByUsername(loginUser);
+
+    // ③세션에사용자정보저장(HTML에서활용)
+    context.session().put("userEmail", user.email);
+    context.session().put("userPhone", user.phone);
+    context.session().put("profileImage",
+        user.profileImage != null ? user.profileImage : "default.png");
+    
+    // ④프로필페이지반환
+    InputStream html = getClass()
+        .getClassLoader()
+        .getResourceAsStream(
+        "META-INF/resources/login/profile.html");
+    return Response.ok(html).build();
+    }
+
+    @GET
+@Path("/profile/info")
+@Produces(MediaType.APPLICATION_JSON)
+public Response profileInfo() {
+
+    // ① 세션 체크
+    String loginUser = context.session().get("loginUser");
+
+    if (loginUser == null) {
+        return Response.status(401).build();
+    }
+
+    // ② DB 조회
+    User user = User.findByUsername(loginUser);
+
+    if (user == null) {
+        return Response.status(404).build();
+    }
+
+    // ③ JSON 응답
+    return Response.ok(
+        Map.of(
+            "username", user.username,
+            "email", user.email != null ? user.email : "",
+            "phone", user.phone != null ? user.phone : "",
+            "profileImage", user.profileImage != null ? user.profileImage : ""
+        )
+    ).build();
+}
+
+@POST
+@Path("/profile/upload")
+@Transactional
+@Consumes(MediaType.MULTIPART_FORM_DATA)
+public Response profileUpload(
+    @RestForm("profileImage") FileUpload file) {
+
+    // ① 세션 체크
+    String loginUser = context.session().get("loginUser");
+
+    if (loginUser == null) {
+        return Response
+            .seeOther(URI.create("/login"))
+            .build();
+    }
+
+    try {
+        // ② 파일 선택 여부 확인
+        if (file == null || file.fileName() == null || file.fileName().isBlank()) {
+            return Response
+                .seeOther(URI.create("/profile?error=no_file"))
+                .build();
+        }
+
+        // ③ 확장자 검사
+        String original = file.fileName();
+        String ext = original.substring(original.lastIndexOf(".") + 1).toLowerCase();
+
+        if (!ext.matches("jpg|jpeg|png|gif|webp")) {
+            return Response
+                .seeOther(URI.create("/profile?error=invalid_type"))
+                .build();
+        }
+
+        // ④ 파일 크기 검사: 5MB
+        if (file.size() > 5 * 1024 * 1024) {
+            return Response
+                .seeOther(URI.create("/profile?error=too_large"))
+                .build();
+        }
+
+        // ⑤ UUID 파일명 생성 + 저장
+        String newFileName = UUID.randomUUID() + "." + ext;
+
+        java.nio.file.Path uploadDir = Paths.get(
+            "src/main/resources/META-INF/resources/uploads/profile"
+        );
+
+        Files.createDirectories(uploadDir);
+
+        Files.copy(
+            file.uploadedFile(),
+            uploadDir.resolve(newFileName),
+            StandardCopyOption.REPLACE_EXISTING
+        );
+
+        // ⑥ DB 업데이트
+        User user = User.findByUsername(loginUser);
+        user.profileImage = newFileName;
+
+        return Response
+            .seeOther(URI.create("/profile"))
+            .build();
+
+    } catch (Exception e) {
+        e.printStackTrace();
+
+        return Response
+            .seeOther(URI.create("/profile?error=upload_fail"))
+            .build();
+    }
+}
 }

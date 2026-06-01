@@ -20,7 +20,7 @@ public class DataSeeder {
         if (User.count() == 0) {
             User guest = new User();
             guest.username = "guest";
-            guest.password = "123123";
+            guest.password = "8E420C6D412A3BE9CC75A94037CBBF2BFF0A865F64EE648672280243B22D2718";
             guest.persist();
         }
 
