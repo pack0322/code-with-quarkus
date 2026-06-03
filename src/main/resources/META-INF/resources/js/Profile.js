@@ -77,6 +77,25 @@ window.onload = function() {
         }
     }
 
+    // 사진 업로드 오류 메시지 처리
+    if (error) {
+        const messages = {
+            'invalid_type': 'jpg, png, gif, webp 파일만 가능합니다.',
+            'too_large': '파일 크기는 5MB 이하여야 합니다.',
+            'upload_fail': '업로드 실패. 다시 시도해주세요.',
+            'no_file': '업로드할 사진을 선택해주세요.'
+        };
+
+        const msg = messages[error];
+        const div = document.getElementById('uploadErrorMsg');
+
+        if (msg && div) {
+            div.textContent = msg;
+            div.classList.remove('d-none');
+        }
+    }
+
+
     // URL 파라미터 오류/성공 감지
     // const params = new URLSearchParams(window.location.search);
     // const error = params.get('error');

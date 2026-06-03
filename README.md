@@ -148,9 +148,22 @@ You can run your application in dev mode that enables live coding using:
 ## 12주차 수업
 실습 : 회원관리 페이지 - 1 수업 완료<br>
 
+과제 :
+
+1. 로그인 에러 처리
+
+   - login.js의 하단에 window.onload 함수를 추가
+   - 로그인 실패 시 오류 메시지를 표시
+
+2. 업로드 에러 처리
+
+   - profile.html 파일 업로드 폼 위에 div 추가
+   - profile.js window.onload 에 추가
 
 <div align="center">
-    <img src="screenshots/12.png" width="45%" alt="12주차 수업완료 화면">
+    <img src="screenshots/12_1.png" width="45%" alt="12주차 수업완료 화면">
+    <img src="screenshots/12_2.1.png" width="45%" alt="12주차 과제완료 화면">
+    <img src="screenshots/12_2.2.png" width="45%" alt="12주차 과제완료 화면">
 </div>
 
 ## 13주차 수업

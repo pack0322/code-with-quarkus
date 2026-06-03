@@ -58,10 +58,13 @@
                 <!-- <a class="nav-link active" aria-current="page" href="#">다운로드</a> -->
                 <a class="nav-link" href="../main_page_sub/download.html">다운로드</a>
               </li>
-              <li class="nav-item">
-                <!-- <a class="nav-link active" aria-current="page" href="#">로그인</a> -->
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="/login">로그인</a>
-              </li>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link btn btn-outline-danger btn-sm px-3"
+                    href="/logout">로그아웃</a>
+              </li>  
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   외부웹사이트
@@ -120,6 +123,11 @@
                     </tr>
                 </table>
             </div>
+        </div>
+
+        <!-- 업로드 오류 메시지 출력 영역 -->
+        <div id="uploadErrorMsg"
+            class="alert alert-danger d-none mb-3">
         </div>
 
         <!-- 사진 업로드 폼 -->
