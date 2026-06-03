@@ -145,3 +145,76 @@ body.light-mode #searchForm button:hover {
     background-color: #198754;
     color: #ffffff;
 }
+
+/* =========================
+   프로필 정보 표 다크/라이트 모드
+========================= */
+
+/* 기본값 = 다크 모드 */
+.profile-info-card {
+    background-color: #212529;
+    color: #ffffff;
+    border: 1px solid #495057;
+}
+
+.profile-info-table {
+    color: #ffffff;
+}
+
+.profile-info-table th,
+.profile-info-table td {
+    background-color: #212529;
+    color: #ffffff;
+    border-color: #495057;
+}
+
+.profile-info-table th {
+    font-weight: bold;
+}
+
+/* 라이트 모드 */
+body.light-mode .profile-info-card {
+    background-color: #ffffff;
+    color: #212529;
+    border-color: #dee2e6;
+}
+
+body.light-mode .profile-info-table {
+    color: #212529;
+}
+
+body.light-mode .profile-info-table th,
+body.light-mode .profile-info-table td {
+    background-color: #ffffff;
+    color: #212529;
+    border-color: #dee2e6;
+}
+
+body.light-mode .profile-info-table th {
+    background-color: #f1f3f5;
+    color: #212529;
+}
+
+/* =========================
+   개인정보 수정 폼 다크/라이트 모드
+========================= */
+
+body.light-mode #updateFormArea .card {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+    border-color: #dee2e6 !important;
+}
+
+body.light-mode #updateFormArea .form-label {
+    color: #212529 !important;
+}
+
+body.light-mode #updateFormArea .form-control {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+    border-color: #ced4da !important;
+}
+
+body.light-mode #updateFormArea .form-control::placeholder {
+    color: #6c757d !important;
+}

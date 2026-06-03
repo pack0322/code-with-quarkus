@@ -169,10 +169,20 @@ You can run your application in dev mode that enables live coding using:
 ## 13주차 수업
 실습 : 회원관리 페이지 - 2 수업 완료<br>
 
+과제 :
+
+1. 토스트로 교체
+
+   - 기존 미구현된 alert 들을 Toast로 구현
+
+2. 최종 마무리 작업
+
 
 <div align="center">
     <img src="screenshots/13_1.png" width="45%" alt="13주차 수업완료 화면">
     <img src="screenshots/13_2.png" width="45%" alt="13주차 수업완료 화면">
     <img src="screenshots/13_3.png" width="45%" alt="13주차 수업완료 화면">
     <img src="screenshots/13_4.png" width="45%" alt="13주차 수업완료 화면">
+    <img src="screenshots/13_5.1.png" width="45%" alt="13주차 과제완료 화면">
+    <img src="screenshots/13_5.2.png" width="45%" alt="13주차 과제완료 화면">
 </div>

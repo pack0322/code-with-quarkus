@@ -14,22 +14,11 @@
 
     <!-- 커스텀 스타일 (LOL 테마 + 챔피언 호버 효과) -->
     <link rel="stylesheet" href="../css/main.css">
-    <!-- <style>
-        body { background-color: #0a0e17; color: #fff; font-family: 'Arial', sans-serif; }
-        .navbar { background-color: #000; }
-        .hero { background: linear-gradient(to bottom, #1e1e1e, #0a0e17); min-height: 60vh; }
-        .accent-purple { color: #a020f0; }
-        .accent-red { color: #ff0000; }
-        .card { background-color: #1e1e1e; border: none; transition: transform 0.3s, box-shadow 0.3s; }
-        .card:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(160, 32, 240, 0.5); }
-        .card-img-top { height: 200px; object-fit: cover; border-radius: 10px 10px 0 0; }
-        .btn-primary { background-color: #a020f0; border: none; }
-        .btn-primary:hover { background-color: #800080; }
-    </style> -->
+
     <script>
         window.onload = function() {
         //alert("메인 페이지 로딩 완료");
-        showToast('메인 페이지 로딩 완료');
+        showToast('프로필 로딩 완료');
         }
     </script>
 </head>
@@ -106,9 +95,9 @@
         </div>
 
         <!-- 개인 정보 출력 -->
-        <div class="card bg-dark text-white border-secondary mb-4">
+        <div class="card profile-info-card mb-4">
             <div class="card-body text-start">
-                <table class="table table-dark table-bordered mb-0">
+                <table class="table profile-info-table table-bordered mb-0">
                     <tr>
                         <th style="width:30%">아이디</th>
                         <td id="infoUsername"></td>
