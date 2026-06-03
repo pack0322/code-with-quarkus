@@ -83,3 +83,65 @@ body.light-mode .hero { background: linear-gradient(to bottom, #dce3ea, #f8f9fa)
 body.light-mode .card { background-color: #ffffff; color: #212529; border: 1px solid #dee2e6; }
 body.light-mode .card-title { color: #212529; }
 body.light-mode .card-text { color: #555; }
+
+/* =========================
+   검색바 다크/라이트 모드
+========================= */
+
+/* 다크 모드 검색창 */
+body.dark-mode #searchInput {
+    background-color: #212529;
+    color: #ffffff;
+    border: 1px solid #495057;
+}
+
+body.dark-mode #searchInput::placeholder {
+    color: #adb5bd;
+}
+
+body.dark-mode #searchInput:focus {
+    background-color: #212529;
+    color: #ffffff;
+    border-color: #a020f0;
+    box-shadow: 0 0 0 0.25rem rgba(160, 32, 240, 0.25);
+}
+
+/* 라이트 모드 검색창 */
+body.light-mode #searchInput {
+    background-color: #ffffff;
+    color: #212529;
+    border: 1px solid #ced4da;
+}
+
+body.light-mode #searchInput::placeholder {
+    color: #6c757d;
+}
+
+body.light-mode #searchInput:focus {
+    background-color: #ffffff;
+    color: #212529;
+    border-color: #198754;
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+/* 검색 버튼도 모드별 정리 */
+body.dark-mode #searchForm button {
+    color: #75d696;
+    border-color: #75d696;
+}
+
+body.dark-mode #searchForm button:hover {
+    background-color: #198754;
+    color: #ffffff;
+}
+
+body.light-mode #searchForm button {
+    color: #198754;
+    border-color: #198754;
+    background-color: transparent;
+}
+
+body.light-mode #searchForm button:hover {
+    background-color: #198754;
+    color: #ffffff;
+}

@@ -115,10 +115,18 @@ You can run your application in dev mode that enables live coding using:
 ## 10주차 수업 및 과제
 실습 : 로그인과 로그아웃 수업 완료<br>
 
+과제 :
+
+1. 다크/라이트 모드 구현
+
+   - 메인 페이지 캐릭터 부분 다크/라이트 구현
+   - 다운로드 페이지 사진 및 네비바 다크/라이트 구현(css 코드 수정)
 
 <div align="center">
     <img src="screenshots/10_1.png" width="45%" alt="10주차 수업완료 화면">
     <img src="screenshots/10_2.png" width="45%" alt="10주차 수업완료 화면">
+    <img src="screenshots/10_3.1.png" width="45%" alt="10주차 과제완료 화면">
+    <img src="screenshots/10_3.2.png" width="45%" alt="10주차 과제완료 화면">
 </div>
 
 

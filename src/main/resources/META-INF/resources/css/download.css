@@ -77,3 +77,118 @@ body.light-mode {
   body.light-mode .navbar .nav-link {
     color: #212529 !important;
 }
+
+/* =========================
+   다운로드 페이지 라이트 모드 보정
+========================= */
+
+/* 라이트 모드 히어로 영역 */
+body.light-mode .hero {
+    background: linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.75)),
+                url('../images/download-banner.jpg') center/cover no-repeat;
+}
+
+body.light-mode .hero h1 {
+    color: #7b2cbf;
+    text-shadow: none;
+}
+
+body.light-mode .hero p,
+body.light-mode .hero .lead {
+    color: #212529;
+}
+
+/* 라이트 모드 제목 */
+body.light-mode .accent-purple {
+    color: #7b2cbf;
+}
+
+/* 라이트 모드 다운로드 버튼 */
+body.light-mode .btn-download {
+    background-color: #a020f0;
+    color: #ffffff;
+}
+
+body.light-mode .btn-download:hover {
+    background-color: #800080;
+    color: #ffffff;
+}
+
+/* 라이트 모드 Mac 다운로드 버튼 */
+body.light-mode .btn-outline-light {
+    color: #212529;
+    border-color: #212529;
+}
+
+body.light-mode .btn-outline-light:hover {
+    background-color: #212529;
+    color: #ffffff;
+}
+
+/* 라이트 모드 탭 */
+body.light-mode .nav-tabs .nav-link {
+    color: #495057;
+}
+
+body.light-mode .nav-tabs .nav-link.active {
+    background-color: #ffffff;
+    color: #7b2cbf;
+    border-color: #dee2e6 #dee2e6 #ffffff;
+}
+
+/* 라이트 모드 테이블 */
+body.light-mode .table {
+    --bs-table-bg: #ffffff;
+    --bs-table-color: #212529;
+    --bs-table-border-color: #dee2e6;
+}
+
+body.light-mode .table th {
+    background-color: #e9ecef;
+    color: #212529;
+}
+
+body.light-mode .table td {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+/* 라이트 모드 카드 */
+body.light-mode .card {
+    background-color: #ffffff;
+    color: #212529;
+    border-color: #dee2e6;
+}
+
+/* 검색창 기본 다크 */
+.navbar .form-control {
+    background-color: #212529;
+    color: #ffffff;
+    border-color: #495057;
+}
+
+.navbar .form-control::placeholder {
+    color: #adb5bd;
+}
+
+/* 검색창 라이트 */
+body.light-mode .navbar .form-control {
+    background-color: #ffffff;
+    color: #212529;
+    border-color: #ced4da;
+}
+
+body.light-mode .navbar .form-control::placeholder {
+    color: #6c757d;
+}
+
+/* 검색 버튼 라이트 */
+body.light-mode .navbar .btn-outline-success {
+    color: #198754;
+    border-color: #198754;
+}
+
+body.light-mode .navbar .btn-outline-success:hover {
+    background-color: #198754;
+    color: #ffffff;
+}
