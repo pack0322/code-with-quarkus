@@ -133,10 +133,16 @@ You can run your application in dev mode that enables live coding using:
 ## 11주차 수업 및 과제
 실습 : 회원가입, 암호화 수업 완료<br>
 
+과제 :
+
+1. 로그인 화면 입력값 체크
+
+   - 로그인 페이지에서 아이디와 비밀번호 입력값 검사 기능 구현
 
 <div align="center">
     <img src="screenshots/11_1.png" width="45%" alt="11주차 수업완료 화면">
     <img src="screenshots/11_2.png" width="45%" alt="11주차 수업완료 화면">
+    <img src="screenshots/11_3.png" width="45%" alt="11주차 과제완료 화면">
 </div>
 
 ## 12주차 수업
