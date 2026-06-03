@@ -138,3 +138,14 @@ You can run your application in dev mode that enables live coding using:
 <div align="center">
     <img src="screenshots/12.png" width="45%" alt="12주차 수업완료 화면">
 </div>
+
+## 13주차 수업
+실습 : 회원관리 페이지 - 2 수업 완료<br>
+
+
+<div align="center">
+    <img src="screenshots/13_1.png" width="45%" alt="13주차 수업완료 화면">
+    <img src="screenshots/13_2.png" width="45%" alt="13주차 수업완료 화면">
+    <img src="screenshots/13_3.png" width="45%" alt="13주차 수업완료 화면">
+    <img src="screenshots/13_4.png" width="45%" alt="13주차 수업완료 화면">
+</div>

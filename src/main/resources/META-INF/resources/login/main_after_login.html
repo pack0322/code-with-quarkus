@@ -28,7 +28,8 @@
     </style> -->
     <script>
         window.onload = function() {
-        alert("메인 페이지 로딩 완료");
+        //alert("메인 페이지 로딩 완료");
+        showToast('메인 페이지 로딩 완료');
         }
     </script>
 </head>
@@ -80,10 +81,18 @@
                 <a class="nav-link" href="main_page_sub/download.html">다운로드</a>
               </li>
               <!-- 기존로그아웃버튼앞에추가-->
-            <li class="nav-item">
+                <!-- <li class="nav-item">
                 <a class="nav-link" href="/profile">
                     👤 프로필
                 </a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile"
+                       id="profileNavLink"
+                       data-bs-toggle="tooltip"
+                       data-bs-placement="bottom">
+                        👤 프로필
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn btn-outline-danger btn-sm px-3"
@@ -452,5 +461,9 @@
         </div>
     </div>
 
+    <script src="../js/test.js"></script>
+    <script src="../js/toggle.js"></script>
+    <script src="../js/profile.js"></script>
+    
 </body>
 </html>
